@@ -7,6 +7,8 @@ const app = Vue.createApp({
       w3School: "https://www.w3school.com",
       courseGoalA: "Learn Vue!",
       courseGoalB: "Master Vue!",
+      htmlA: "<p>This is htmlA</p>",
+      htmlB: "<p>This is htmlB</p>",
     };
   },
   methods: {
@@ -16,6 +18,14 @@ const app = Vue.createApp({
         return this.courseGoalA;
       } else {
         return this.courseGoalB;
+      }
+    },
+    outputHTML() {
+      const randomNumber = Math.random();
+      if (randomNumber < 0.5) {
+        return this.htmlA;
+      } else {
+        return this.htmlB;
       }
     },
   },
